@@ -12,19 +12,18 @@ abstract class Human {
     public boolean SwimBreaststroke;
 
     public abstract void getName();
+}
 
-    public interface AbleToMakeRun {
+    interface AbleToMakeRun {
         public void makeRunJogging();
         public void makeRunNormal();
     }
-    public interface AbleToMakeSwim{
+    interface AbleToMakeSwim{
         public void makeSwimCrawl();
         public void makeSwimBreaststroke();
     }
-}
 
-
-class Man extends Human implements Human.AbleToMakeRun, Human.AbleToMakeSwim {
+class Man extends Human implements AbleToMakeRun, AbleToMakeSwim {
 
     public String name = "Mr. Claus";
     public boolean RunJogging = true;
@@ -58,7 +57,7 @@ class Man extends Human implements Human.AbleToMakeRun, Human.AbleToMakeSwim {
     }
 }
 
-class Woman extends Human implements Human.AbleToMakeRun, Human.AbleToMakeSwim {
+class Woman extends Human implements AbleToMakeRun, AbleToMakeSwim {
 
     public String name = "Mrs. Claus";
     public boolean RunJogging = false;
